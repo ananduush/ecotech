@@ -11,7 +11,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="h-[100px] shadow-md flex items-center">
+    <div className="h-[100px] shadow-md flex items-center fixed w-full">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <img
