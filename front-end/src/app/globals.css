@@ -12,6 +12,9 @@
   h3 {
     @apply text-2xl font-medium tracking-tight text-gray-700;
   }
+  h3 {
+    @apply text-sm font-extrabold text-gray-700;
+  }
   p {
     @apply text-base leading-relaxed text-gray-600;
   }

@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Header = () => {
@@ -17,14 +18,16 @@ const Header = () => {
   };
 
   return (
-    <div className="h-[100px] shadow-md flex items-center fixed w-full">
+    <div className="h-[100px] shadow-md flex items-center fixed bg-white w-full">
       <div className="container flex justify-between items-center">
         {/* Logo */}
-        <img
-          src="/images/logo.png"
-          alt="Ecotech logo"
-          className="max-h-[50px] w-max"
-        />
+        <Link href={"/"}>
+          <img
+            src="/images/logo.png"
+            alt="Ecotech logo"
+            className="max-h-[50px] w-max"
+          />
+        </Link>
 
         {/* Desktop Menu Items */}
         <div className="hidden lg:flex gap-5">
