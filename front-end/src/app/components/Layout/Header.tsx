@@ -1,21 +1,22 @@
 "use client";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
+import { Link } from "@/i18n/routing";
 
 const Header = () => {
-  const menuItems = [
-    { name: "Нүүр хуудас", link: "/" },
-    { name: "Бидний тухай", link: "/" },
-    { name: "Кемп менежментийн үйлчилгээ", link: "/" },
-    { name: "Цэвэр ус үйлдвэрлэл", link: "/" },
-    { name: "Хамтын ажиллагаа", link: "/" },
-  ];
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const t = useTranslations("MenuItems");
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  const menuItems = [
+    { name: t("home") },
+    { name: t("aboutUs") },
+    { name: t("campManagement") },
+    { name: t("waterProduction") },
+    { name: t("partnerships") },
+  ];
 
   return (
     <div className="h-[100px] shadow-md flex items-center fixed bg-white w-full z-10">
@@ -40,28 +41,6 @@ const Header = () => {
             </Link>
           ))}
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="block lg:hidden"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle Menu"
-        >
-          <svg
-            className="h-6 w-6 text-gray-800"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
 
         {/* Overlay */}
         {isMobileMenuOpen && (
