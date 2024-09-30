@@ -64,7 +64,7 @@ const Footer = () => {
       <div className="container pt-10">
         {/* First section: Logo and description */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_800px] gap-10 items-start justify-between">
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 max-w-[350px]">
             <Link href={"/"}>
               <img
                 src="/images/logo.png"
@@ -98,7 +98,7 @@ const Footer = () => {
               <div key={`column-title-${column.title}`}>
                 {/* Title of the section */}
                 <Link href={column.link} className="mb-2 block">
-                  <h4 className="underline-on-hover text-lg">{column.title}</h4>
+                  <h4 className="underline-on-hover text-sm">{column.title}</h4>
                 </Link>
 
                 {/* Child links (only visible on larger screens) */}
