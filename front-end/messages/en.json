@@ -1,0 +1,9 @@
+{
+	"MenuItems": {
+		"home": "Home",
+		"aboutUs": "About Us",
+		"campManagement": "Camp Management Services",
+		"waterProduction": "Water Production",
+		"partnerships": "Partnerships"
+	}
+}
