@@ -12,11 +12,41 @@
   h3 {
     @apply text-2xl font-medium tracking-tight text-gray-700;
   }
-  h3 {
-    @apply text-sm font-extrabold text-gray-700;
+  h4 {
+    @apply text-base font-extrabold text-gray-700;
   }
   p {
     @apply text-base leading-relaxed text-gray-600;
+  }
+}
+
+@layer components {
+  .underline-on-hover {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+
+  .underline-on-hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Positioning the underline */
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+  }
+
+  .underline-on-hover:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .underline-on-hover:hover {
+    color: #007acc; /* Custom hover color if needed */
   }
 }
 

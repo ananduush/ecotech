@@ -4,11 +4,11 @@ import React, { useState } from "react";
 
 const Header = () => {
   const menuItems = [
-    { name: "Нүүр хуудас" },
-    { name: "Бидний тухай" },
-    { name: "Кемп менежментийн үйлчилгээ" },
-    { name: "Цэвэр ус үйлдвэрлэл" },
-    { name: "Хамтын ажиллагаа" },
+    { name: "Нүүр хуудас", link: "/" },
+    { name: "Бидний тухай", link: "/" },
+    { name: "Кемп менежментийн үйлчилгээ", link: "/" },
+    { name: "Цэвэр ус үйлдвэрлэл", link: "/" },
+    { name: "Хамтын ажиллагаа", link: "/" },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,9 +18,10 @@ const Header = () => {
   };
 
   return (
-    <div className="h-[100px] shadow-md flex items-center fixed bg-white w-full">
+    <div className="h-[100px] shadow-md flex items-center fixed bg-white w-full z-10">
       <div className="container flex justify-between items-center">
         {/* Logo */}
+
         <Link href={"/"}>
           <img
             src="/images/logo.png"
@@ -31,15 +32,12 @@ const Header = () => {
 
         {/* Desktop Menu Items */}
         <div className="hidden lg:flex gap-5">
-          {menuItems.map((item) => (
-            <div key={item.name} className="group relative w-max">
-              <p className="cursor-pointer group-hover:text-main transition-colors">
-                {item.name}
-              </p>
-
-              {/* Underline with transition */}
-              <div className="absolute left-0 bottom-0 w-full h-[2px] bg-main scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-            </div>
+          {menuItems.map((item, idx) => (
+            <Link href={"/"} key={idx}>
+              <div key={item.name} className="group relative w-max">
+                <p className="underline-on-hover">{item.name}</p>
+              </div>
+            </Link>
           ))}
         </div>
 
