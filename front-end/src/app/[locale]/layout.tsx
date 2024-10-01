@@ -39,10 +39,12 @@ export default async function LocaleLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          <div className="h-[100px]">
+          <header className="h-[100px]">
             <Header />
-          </div>
-          {children}
+          </header>
+
+          <div className="min-h-screen">{children}</div>
+
           <footer>
             <Footer />
           </footer>

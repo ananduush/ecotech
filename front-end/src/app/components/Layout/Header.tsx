@@ -43,7 +43,7 @@ const Header = () => {
               </p>
 
               {/* Underline with transition */}
-              <span className="absolute left-0 bottom-0 w-full h-[2px] bg-main scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+              <div className="absolute left-0 bottom-0 w-full h-[2px] bg-main scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </Link>
           ))}
         </div>
@@ -82,7 +82,7 @@ const Header = () => {
         <div
           className={`fixed top-0 left-0 h-full bg-white shadow-lg w-[100%] max-w-[400px] transform ${
             isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 ease-in-out z-50`}
+          } transition-transform duration-300 ease-in-out z-[100]`}
         >
           <div className="p-4">
             {/* Logo */}
