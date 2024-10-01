@@ -56,6 +56,20 @@ export default function CateringSlider() {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper1"
         style={{ marginTop: "20px" }}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        }}
       >
         {images.map((image, idx) => (
           <SwiperSlide key={idx}>

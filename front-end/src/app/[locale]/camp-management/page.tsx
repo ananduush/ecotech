@@ -29,7 +29,7 @@ const CampManagement = () => {
     {
       icon: (
         <BsHousesFill
-          size={50}
+          size={30} // smaller icons on mobile
           className={`${
             active === "housing"
               ? "text-white"
@@ -43,7 +43,7 @@ const CampManagement = () => {
     {
       icon: (
         <MdOutlineFoodBank
-          size={50}
+          size={30}
           className={`${
             active === "catering"
               ? "text-white"
@@ -57,7 +57,7 @@ const CampManagement = () => {
     {
       icon: (
         <GiWashingMachine
-          size={50}
+          size={30}
           className={`${
             active === "laundry"
               ? "text-white"
@@ -68,20 +68,20 @@ const CampManagement = () => {
       slug: "laundry",
       title: "хувцас угаалга",
     },
-    {
-      icon: (
-        <MdMiscellaneousServices
-          size={50}
-          className={`${
-            active === "services"
-              ? "text-white"
-              : "text-gray-400 group-hover:text-white"
-          }`}
-        />
-      ),
-      slug: "services",
-      title: "засвар үйлчилгээ",
-    },
+    // {
+    //   icon: (
+    //     <MdMiscellaneousServices
+    //       size={30}
+    //       className={`${
+    //         active === "services"
+    //           ? "text-white"
+    //           : "text-gray-400 group-hover:text-white"
+    //       }`}
+    //     />
+    //   ),
+    //   slug: "services",
+    //   title: "засвар үйлчилгээ",
+    // },
   ];
 
   return (
@@ -91,17 +91,14 @@ const CampManagement = () => {
         title={bannerData.title}
         breadcrumb={bannerData.breadcrumb}
       />
-      {/* <div className="h-[400px] bg-gray-500 w-full text-white text-[50px] font-bold text-center items-center flex justify-center">
-        BANNER
-      </div> */}
 
       <div className="container flex flex-col gap-10">
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {slides.map((slide, index) => (
             <button
               onClick={() => setActive(slide.slug)}
               key={index}
-              className={`flex w-full py-5 flex-col items-center gap-5 
+              className={`flex w-full py-2 sm:py-5 flex-row md:flex-col items-center gap-2 md:gap-5 
                 ${
                   active === slide.slug
                     ? "bg-main text-white"
@@ -113,7 +110,7 @@ const CampManagement = () => {
               <h3
                 className={`uppercase ${
                   active === slide.slug ? "text-white" : "text-main"
-                } text-[16px] leading-5 group-hover:text-white`}
+                } text-[14px] sm:text-[16px] leading-5 group-hover:text-white`}
               >
                 {slide.title}
               </h3>

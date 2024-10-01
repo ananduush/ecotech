@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import {
   IconBrandFacebookFilled,
   IconBrandLinkedin,
@@ -13,14 +13,17 @@ const Footer = () => {
   const socials = [
     {
       name: "Facebook",
+      link: "",
       icon: <IconBrandFacebookFilled />,
     },
     {
       name: "Twitter",
+      link: "",
       icon: <IconBrandTwitterFilled />,
     },
     {
       name: "LinkedIn",
+      link: "",
       icon: <IconBrandLinkedin />,
     },
   ];
@@ -28,33 +31,33 @@ const Footer = () => {
   const columns = [
     {
       title: "Бидний тухай",
-      link: "/",
+      link: "/about-us",
       children: [
-        { name: "Эрхэм зорилго", link: "/" },
-        { name: "Алсын хараа", link: "/" },
-        { name: "Үнэт зүйлс", link: "/" },
-        { name: "Түүхэн замнал", link: "/" },
-        { name: "Үйл ажиллагааны чиглэл", link: "/" },
+        { name: "Эрхэм зорилго", link: "/about-us" },
+        { name: "Алсын хараа", link: "/about-us" },
+        { name: "Үнэт зүйлс", link: "/about-us" },
+        { name: "Түүхэн замнал", link: "/about-us" },
+        { name: "Үйл ажиллагааны чиглэл", link: "/about-us" },
       ],
     },
     {
       title: "Кемп менежментийн үйлчилгээ",
-      link: "/",
+      link: "/camp-management",
       children: [
-        { name: "Кемп менежмент", link: "/" },
-        { name: "Хоол үйлдвэрлэл", link: "/" },
-        { name: "Хувцас угаалга", link: "/" },
-        { name: "Засвар үйлчилгээ", link: "/" },
+        { name: "Кемп менежмент", link: "/camp-management" },
+        { name: "Хоол үйлдвэрлэл", link: "/camp-management" },
+        { name: "Хувцас угаалга", link: "/camp-management" },
+        { name: "Засвар үйлчилгээ", link: "/camp-management" },
       ],
     },
     {
       title: "Цэвэр ус үйлдвэрлэл",
-      link: "/",
-      children: [{ name: "Брэнд бүтээгдэхүүн", link: "/" }],
+      link: "/water-production",
+      children: [{ name: "Брэнд бүтээгдэхүүн", link: "/water-production" }],
     },
     {
       title: "Хамтын ажиллагаа",
-      link: "/",
+      link: "/partnerships",
       children: [],
     },
   ];
@@ -69,31 +72,35 @@ const Footer = () => {
               <img
                 src="/images/logo.png"
                 alt="Ecotech logo"
-                className="max-h-[40px] w-max"
+                className="max-h-[70px] w-max"
               />
             </Link>
 
-            <p className="text-sm text-wrap">
-              Эколожикал Текноложи ХХК нь 2011 оноос эхлэн хэрэглэгчдийн эрэлт
-              хэрэгцээнд тулгуурлан хүрээлэн буй орчны аюулгүй байдал, эрүүл
-              ахуй, чанарын удирдлагын стандартад нийцсэн кемп, катерингийн
-              үйлчилгээг хэрэглэгч, үйлчлүүлэгчдийн байгаа газар байршилд хүрч,
-              төв суурин газраас алслагдсан газар зүйн байрлалыг үл харгалзан
-              хэрэглэгчдийн тав тухтай байдлыг эрхэмлэн, суурин болон гэр
-              кэмпүүдийг байгуулан, эрэлт хэрэгцээг хангасан үйлчилгээг
-              үзүүлэхийг зорин ажиллаж байна.
-            </p>
-
             {/* Social Icons */}
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               {socials.map((e: any) => (
-                <ActionIcon key={e.name}>{e.icon}</ActionIcon>
+                <Link href={e.link}>
+                  <ActionIcon key={e.name}>{e.icon}</ActionIcon>
+                </Link>
               ))}
+            </div> */}
+
+            {/* Google Maps Embed */}
+            <div className="mt-5 w-full h-60">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d328.49359301855543!2d106.92104735253773!3d47.91927885497541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d969246b5edc9cd%3A0xe381075cd6ee26b0!2sCity%20tower%20business%20center!5e0!3m2!1sen!2smn!4v1727812403166!5m2!1sen!2smn"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
 
           {/* Second section: Menu columns */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
             {columns.map((column: any, index: number) => (
               <div key={`column-title-${column.title}`}>
                 {/* Title of the section */}
