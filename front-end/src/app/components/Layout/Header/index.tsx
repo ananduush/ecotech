@@ -27,11 +27,13 @@ const Header = () => {
       <div className="container flex justify-between items-center">
         {/* Logo */}
         <Link href={"/"}>
-          <img
-            src="/images/logo.png"
-            alt="Ecotech logo"
-            className="max-h-[50px] w-max"
-          />
+          <div>
+            <img
+              src="/images/logo.png"
+              alt="Ecotech logo"
+              className="max-h-[50px] w-max"
+            />
+          </div>
         </Link>
 
         {/* Desktop Menu Items */}
@@ -123,7 +125,11 @@ const Header = () => {
             {/* Menu Items */}
             <nav className="mt-8">
               {menuItems.map((item) => (
-                <Link href={item.link} key={item.name}>
+                <Link
+                  onClick={toggleMobileMenu}
+                  href={item.link}
+                  key={item.name}
+                >
                   <p className="mb-4">
                     <span
                       className={`text-xl font-semibold cursor-pointer transition-colors ${

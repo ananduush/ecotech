@@ -69,11 +69,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_800px] gap-10 items-start justify-between">
           <div className="flex flex-col gap-5">
             <Link href={"/"}>
-              <img
-                src="/images/logo.png"
-                alt="Ecotech logo"
-                className="max-h-[70px] w-max"
-              />
+              <div>
+                <img
+                  src="/images/logo.png"
+                  alt="Ecotech logo"
+                  className="max-h-[70px] w-max"
+                />
+              </div>
             </Link>
 
             {/* Social Icons */}
