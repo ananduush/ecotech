@@ -34,9 +34,9 @@ const Header = () => {
         <div className="hidden lg:flex lg:items-center gap-5">
           {menuItems.map((item, idx) => (
             <Link href={item.link} key={idx}>
-              <div key={item.name} className="group relative w-max">
+              <p key={item.name} className="group relative w-max">
                 <p className="underline-on-hover">{item.name}</p>
-              </div>
+              </p>
             </Link>
           ))}
           <LanguageSelector />

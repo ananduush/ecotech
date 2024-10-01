@@ -1,9 +1,80 @@
 {
-	"MenuItems": {
-		"home": "Home",
-		"aboutUs": "About Us",
-		"campManagement": "Camp Management Services",
-		"waterProduction": "Water Production",
-		"partnerships": "Partnerships"
-	}
+  "MenuItems": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "campManagement": "Camp Management Services",
+    "waterProduction": "Water Production",
+    "partnerships": "Partnerships"
+  },
+
+  "banner": {
+    "title": "About Us",
+    "breadcrumb": {
+      "home": "Home",
+      "about": "About Us"
+    }
+  },
+
+  "company": {
+    "introduction": "Ecological Technology LLC has been providing camp and catering services that comply with environmental safety, hygiene, and quality management standards since 2011. We reach our customers and clients wherever they are, even in remote geographical locations far from urban areas, prioritizing their comfort by establishing both stationary and mobile camps to meet their needs.",
+    "mission": {
+      "title": "Mission",
+      "description": "We aim to be a leading company by continuously increasing our productivity and contributing to the value and international competitiveness of our customers through eco-friendly and high-quality products and services."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "We will lead sustainable development and become a company providing products and services that meet international standards."
+    },
+    "values": {
+      "title": "Values",
+      "leadership": "Leadership",
+      "leadershipDescription": "We continuously increase our market position by innovating, fostering strong relationships, and creating a company culture built on vision and appropriate management.",
+      "quality": "Quality & Standards",
+      "qualityDescription": "We implement and maintain international standards in our operations.",
+      "safety": "Safety",
+      "safetyDescription": "We prioritize safety and food hygiene throughout every step of our processes, always keeping people at the forefront.",
+      "sustainability": "Sustainability",
+      "sustainabilityDescription": "We lead by ensuring sustainable growth and spearheading sustainable development."
+    },
+    "operations": {
+      "title": "Operational Directions"
+    }
+  },
+  "timeline": {
+    "title": "Our Timeline",
+    "events": {
+      "2011": {
+        "title": "Company Foundation",
+        "description": "Ecological Technology LLC was founded in 2011."
+      },
+      "2012": {
+        "title": "200 Capacity Camp Facility",
+        "description": "In 2012, a fully equipped 2-story camp facility with a capacity of 200 people, including accommodation, catering, and laundry services, was commissioned."
+      },
+      "2015": {
+        "title": "New Camp in Darkhan-Uul",
+        "description": "In 2015, a camp was established in the Zoost Gold Mine area of Darkhan-Uul province."
+      },
+      "2017": {
+        "title": "Camp for Bayan-Undarga Mine",
+        "description": "In 2017, a ger camp was set up to accommodate 120 workers at the Bayan-Undarga Mine."
+      },
+      "2020": {
+        "title": "Expansion and New Project",
+        "description": "In 2020, the camp was expanded to accommodate 200 people and equipped with a greywater recycling treatment plant. We also initiated and successfully led the “Undraa” bottled water project."
+      },
+      "2022": {
+        "title": "Catering Services",
+        "description": "In 2022, we started managing catering services at the auto base of Ogoot LLC in Nalaikh District, and in May, we began managing catering at the auto base of MERA LLC in Bayanzurkh District."
+      },
+      "2023": {
+        "title": "Food Factory Project",
+        "description": "In 2023, we initiated technological research for a food factory project that meets HACCP, GMP, and GHP standards."
+      },
+      "2024": {
+        "title": "Future Vision",
+        "description": "In 2024, we aim to become a leading company that provides eco-friendly products and services that meet international standards."
+      }
+    }
+  }
 }
