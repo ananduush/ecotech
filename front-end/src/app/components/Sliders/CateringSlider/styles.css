@@ -1,0 +1,45 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper2 {
+  height: 500px;
+  width: 100%;
+}
+
+.mySwiper1 {
+  height: 100px;
+  padding: 10px 0;
+}
+
+.mySwiper1 .swiper-slide {
+  width: 25%;
+  height: 100px;
+  opacity: 0.4;
+}
+
+.mySwiper1 .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .mySwiper1 .swiper-slide {
+    width: 50%;
+    height: 80px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mySwiper1 .swiper-slide {
+    width: 100%;
+    height: 60px;
+  }
+}
