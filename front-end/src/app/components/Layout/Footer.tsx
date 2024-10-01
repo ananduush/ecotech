@@ -60,7 +60,7 @@ const Footer = () => {
   ];
 
   return (
-    <div>
+    <div className="border-t-[1px] border-t-gray-200">
       <div className="container pt-10">
         {/* First section: Logo and description */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_800px] gap-10 items-start justify-between">
