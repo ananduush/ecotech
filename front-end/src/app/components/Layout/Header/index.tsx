@@ -31,7 +31,7 @@ const Header = () => {
             <img
               src="/images/logo.png"
               alt="Ecotech logo"
-              className="max-h-[50px] w-max"
+              className="max-h-[50px]"
             />
           </div>
         </Link>

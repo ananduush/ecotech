@@ -73,7 +73,7 @@ const Footer = () => {
                 <img
                   src="/images/logo.png"
                   alt="Ecotech logo"
-                  className="max-h-[70px] w-max"
+                  className="max-h-[70px]"
                 />
               </div>
             </Link>
