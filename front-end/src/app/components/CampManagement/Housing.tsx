@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Housing = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const contents = [
     {
       title: "Сэтгэл ханамж",
@@ -36,6 +42,7 @@ const Housing = () => {
     <div className="flex flex-col gap-10">
       {contents.map((content: any, idx) => (
         <div
+          data-aos={`${idx % 2 === 0 ? "fade-up-right" : "fade-up-left"}`}
           key={`housing-${idx}`}
           className="grid grid-cols-2 shadow-lg rounded-lg items-center p-5 gap-2"
         >
@@ -51,8 +58,13 @@ const Housing = () => {
               content.images.length >= 3 ? "grid-cols-2" : "grid-cols-1"
             } gap-1`}
           >
-            {content.images.map((img: any) => (
-              <img src={img.url} alt="" className="rounded-md" />
+            {content.images.map((img: any, idx: number) => (
+              <img
+                key={`standart-${idx}`}
+                src={img.url}
+                alt=""
+                className="rounded-md"
+              />
             ))}
           </div>
 
@@ -70,13 +82,24 @@ const Housing = () => {
 
         <div className="flex justify-center">
           {standarts.map((standart: any, idx) => (
-            <div className="flex items-center max-w-[700px] gap-10">
-              <div className="flex flex-col items-center gap-5 text-center">
+            <div
+              key={`standart-${idx}`}
+              className="flex items-center max-w-[700px] gap-10"
+            >
+              <div
+                data-aos={"fade-right"}
+                className="flex flex-col items-center gap-5 text-center"
+              >
                 <img src="/icons/iso.svg" alt="" className="max-w-[150px]" />
                 <p>{standart.text}</p>
               </div>
 
-              <img src="/images/iso.png" alt="" className="w-[300px]" />
+              <img
+                data-aos={"fade-left"}
+                src="/images/iso.png"
+                alt=""
+                className="w-[300px]"
+              />
             </div>
           ))}
         </div>
