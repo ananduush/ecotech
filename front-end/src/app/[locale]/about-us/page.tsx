@@ -12,7 +12,7 @@ const AboutUsPage = () => {
   const company = useTranslations("company");
 
   const bannerData = {
-    imageSrc: "/images/company/hero-image.jpg",
+    imageSrc: "/images/housing/resort.jpg",
     title: banner("title"),
     breadcrumb: [
       { label: banner("breadcrumb.home"), link: "/" },

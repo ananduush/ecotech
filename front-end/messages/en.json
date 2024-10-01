@@ -95,5 +95,30 @@
       "title": "AMTAT Water",
       "description": "AMTAT Water is the perfect choice for your daily hydration needs, offering superior purity and taste."
     }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "breadcrumb": {
+      "home": "Home",
+      "contact": "Contact Us"
+    },
+    "contactTitle": "Get in Touch",
+    "contactDescription": "We are here to assist you with any inquiries or information you need. Please feel free to reach out to us via phone, email, or using the contact form below.",
+    "details": {
+      "title": "Contact Details",
+      "address": "1234 Ecological Technology LLC, Ulaanbaatar, Mongolia",
+      "phone": "Phone",
+      "email": "Email"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Your Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Your Email",
+      "emailPlaceholder": "Enter your email address",
+      "message": "Your Message",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send Message"
+    }
   }
 }
