@@ -15,8 +15,8 @@ const Header = () => {
     { name: t("home"), link: "/" },
     { name: t("aboutUs"), link: "/about-us" },
     { name: t("campManagement"), link: "/camp-management" },
-    { name: t("waterProduction"), link: "/" },
-    { name: t("partnerships"), link: "/" },
+    { name: t("waterProduction"), link: "/water-production" },
+    { name: t("partnerships"), link: "/partnerships" },
   ];
 
   return (
