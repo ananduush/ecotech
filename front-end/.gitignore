@@ -37,6 +37,6 @@ next-env.d.ts
 
 
 # lock files
-package-lock.json
-yarn.lock
-bun.lockb
+# package-lock.json
+# yarn.lock
+# bun.lockb
