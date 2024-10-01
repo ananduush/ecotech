@@ -29,6 +29,7 @@ const LanguageSelector = () => {
   const handleLanguageChange = (locale: string) => {
     const newPath = `/${locale}${pathname.substring(3)}`;
     router.push(newPath);
+    router.refresh();
   };
 
   return (

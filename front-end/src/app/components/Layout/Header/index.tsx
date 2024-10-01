@@ -12,11 +12,11 @@ const Header = () => {
   };
 
   const menuItems = [
-    { name: t("home") },
-    { name: t("aboutUs") },
-    { name: t("campManagement") },
-    { name: t("waterProduction") },
-    { name: t("partnerships") },
+    { name: t("home"), link: "/" },
+    { name: t("aboutUs"), link: "/" },
+    { name: t("campManagement"), link: "/camp-management" },
+    { name: t("waterProduction"), link: "/" },
+    { name: t("partnerships"), link: "/" },
   ];
 
   return (
@@ -33,7 +33,7 @@ const Header = () => {
         {/* Desktop Menu Items */}
         <div className="hidden lg:flex lg:items-center gap-5">
           {menuItems.map((item, idx) => (
-            <Link href={"/"} key={idx}>
+            <Link href={item.link} key={idx}>
               <div key={item.name} className="group relative w-max">
                 <p className="underline-on-hover">{item.name}</p>
               </div>
