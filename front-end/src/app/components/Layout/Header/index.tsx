@@ -2,6 +2,7 @@
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { Link } from "@/i18n/routing";
+import LanguageSelector from "./LanguageSelector";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,17 +23,15 @@ const Header = () => {
     <div className="h-[100px] shadow-md flex items-center fixed bg-white w-full z-10">
       <div className="container flex justify-between items-center">
         {/* Logo */}
-
         <Link href={"/"}>
           <img
             src="/images/logo.png"
             alt="Ecotech logo"
-            className="max-h-[50px] w-max"
+            className="max-h-[90px] w-max"
           />
         </Link>
-
         {/* Desktop Menu Items */}
-        <div className="hidden lg:flex gap-5">
+        <div className="hidden lg:flex lg:items-center gap-5">
           {menuItems.map((item, idx) => (
             <Link href={"/"} key={idx}>
               <div key={item.name} className="group relative w-max">
@@ -40,8 +39,8 @@ const Header = () => {
               </div>
             </Link>
           ))}
+          <LanguageSelector />
         </div>
-
         {/* Overlay */}
         {isMobileMenuOpen && (
           <div
@@ -49,7 +48,6 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(false)}
           />
         )}
-
         {/* Mobile Sidebar Menu */}
         <div
           className={`fixed top-0 left-0 h-full bg-white shadow-lg w-[100%] max-w-[400px] transform ${
@@ -86,7 +84,6 @@ const Header = () => {
                 </svg>
               </button>
             </div>
-
             {/* Menu Items */}
             <nav className="mt-8">
               {menuItems.map((item) => (
