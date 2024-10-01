@@ -20,7 +20,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="h-[100px] shadow-md flex items-center fixed bg-white w-full z-10">
+    <div className="h-[100px] shadow-md flex items-center fixed bg-white w-full z-[100]">
       <div className="container flex justify-between items-center">
         {/* Logo */}
         <Link href={"/"}>
@@ -41,6 +41,29 @@ const Header = () => {
           ))}
           <LanguageSelector />
         </div>
+
+        <div className="lg:hidden">
+          <button
+            className="text-gray-800 focus:outline-none"
+            onClick={toggleMobileMenu}
+          >
+            <svg
+              className="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
         {/* Overlay */}
         {isMobileMenuOpen && (
           <div
@@ -84,6 +107,7 @@ const Header = () => {
                 </svg>
               </button>
             </div>
+
             {/* Menu Items */}
             <nav className="mt-8">
               {menuItems.map((item) => (
