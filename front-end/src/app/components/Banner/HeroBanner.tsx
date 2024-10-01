@@ -16,7 +16,7 @@ const Banner = ({ imageSrc, title, breadcrumb }: any) => {
 
           <div className="text-sm text-white flex items-center">
             {breadcrumb.map((item: any, index: any) => (
-              <div key={index} className="flex items-center">
+              <div key={index + item.link} className="flex items-center">
                 <Link
                   href={item.link}
                   className={`hover:underline  ${
