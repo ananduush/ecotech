@@ -63,28 +63,17 @@ const HomeServicesSlider = () => {
 
   return (
     <div className="w-full">
-      <TabGroup className={"w-full"}>
-        <TabList className={"flex justify-between"}>
-          {slides.map((slide) => (
-            <Tab>
-              <div className="flex flex-col items-center gap-5 hover:text-white group hover:bg-main duration-300 ease-in-out">
-                <div>{slide.icon}</div>
+      <div className="grid grid-cols-5">
+        {slides.map((slide) => (
+          <button className="flex w-full py-5 flex-col items-center gap-5 hover:text-white group hover:bg-main duration-300 ease-in-out">
+            <div>{slide.icon}</div>
 
-                <h3 className="uppercase group-hover:text-white text-main text-[16px] leading-5">
-                  {slide.title}
-                </h3>
-              </div>
-            </Tab>
-          ))}
-        </TabList>
-        <TabPanels>
-          <TabPanel>Content 1</TabPanel>
-          <TabPanel>Content 2</TabPanel>
-          <TabPanel>Content 3</TabPanel>
-          <TabPanel>Content 4</TabPanel>
-          <TabPanel>Content 5</TabPanel>
-        </TabPanels>
-      </TabGroup>
+            <h3 className="uppercase group-hover:text-white text-main text-[16px] leading-5">
+              {slide.title}
+            </h3>
+          </button>
+        ))}
+      </div>
 
       {/* <Swiper
         slidesPerView={5}
