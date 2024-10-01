@@ -5,8 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import "./styles.css";
-
 import { Autoplay, Pagination } from "swiper/modules";
 import { MdOutlineFoodBank } from "react-icons/md";
 import { BsHousesFill } from "react-icons/bs";

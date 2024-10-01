@@ -30,6 +30,7 @@ const Header = () => {
             className="max-h-[90px] w-max"
           />
         </Link>
+
         {/* Desktop Menu Items */}
         <div className="hidden lg:flex lg:items-center gap-5">
           {menuItems.map((item, idx) => (
