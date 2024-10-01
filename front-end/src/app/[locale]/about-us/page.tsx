@@ -29,13 +29,15 @@ const AboutUsPage = () => {
         breadcrumb={bannerData.breadcrumb}
       />
 
-      {/* Company Introduction Section */}
       <section className="py-12 px-4 bg-gray-100">
         <div className="container mx-auto text-left flex flex-col md:flex-row items-center">
-          {/* Text Content */}
           <div className="md:w-1/2 md:pr-8" data-aos="fade-right">
             <p className="text-lg leading-8 text-gray-700 mb-8">
-              <span className="font-semibold">Эколожикал Текноложи</span> ХХК нь{" "}
+              {company.rich("introduction", {
+                ecotech: (chunks) => (
+                  <span className="font-semibold">{chunks}</span>
+                ),
+              })}
               {company("introduction")}
             </p>
           </div>

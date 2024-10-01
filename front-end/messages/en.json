@@ -18,7 +18,7 @@
   },
 
   "company": {
-    "introduction": "Ecological Technology LLC has been providing camp and catering services that comply with environmental safety, hygiene, and quality management standards since 2011. We reach our customers and clients wherever they are, even in remote geographical locations far from urban areas, prioritizing their comfort by establishing both stationary and mobile camps to meet their needs.",
+    "introduction": "<ecotech> Ecological Technology LLC </ecotech> has been providing camp and catering services that comply with environmental safety, hygiene, and quality management standards since 2011. We reach our customers and clients wherever they are, even in remote geographical locations far from urban areas, prioritizing their comfort by establishing both stationary and mobile camps to meet their needs.",
     "mission": {
       "title": "Mission",
       "description": "We aim to be a leading company by continuously increasing our productivity and contributing to the value and international competitiveness of our customers through eco-friendly and high-quality products and services."
@@ -77,6 +77,23 @@
         "title": "Future Vision",
         "description": "In 2024, we aim to become a leading company that provides eco-friendly products and services that meet international standards."
       }
+    }
+  },
+  "waterProduction": {
+    "title": "Water Production",
+    "breadcrumb": {
+      "home": "Home",
+      "water": "Water Production"
+    },
+    "productionTitle": "Clean Water Production",
+    "productionDescription": "In the production environment, we implement health and hygiene practices, conducting CIP and SOP disinfections every week. Every quarter, we ensure food safety by having the water tested at the Mongolian Inspection Agency (MIA) of Ömnögovi Province.",
+    "miner": {
+      "title": "MINER Water",
+      "description": "MINER is pure water filtered through a 6-layer filter system with a pH of 7.5. The more you drink, the lighter you feel."
+    },
+    "amtat": {
+      "title": "AMTAT Water",
+      "description": "AMTAT Water is the perfect choice for your daily hydration needs, offering superior purity and taste."
     }
   }
 }
