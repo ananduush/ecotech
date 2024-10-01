@@ -142,7 +142,7 @@ const Header = () => {
                 </Link>
               ))}
 
-              <Link href={"/contact-us"}>
+              <Link onClick={toggleMobileMenu} href={"/contact-us"}>
                 <button
                   type="button"
                   className="text-black mt-10 hover:bg-white uppercase hover:text-black border-[1px] border-gray-300 focus:ring-4 focus:ring-black font-bold rounded-lg text-md px-5 py-2.5 me-2 mb-2 focus:outline-none"
