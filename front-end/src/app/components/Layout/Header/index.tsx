@@ -97,7 +97,7 @@ const Header = () => {
               <img
                 src="/images/logo.png"
                 alt="Ecotech logo"
-                className="max-h-[50px] w-max"
+                className="max-h-[50px]"
               />
               {/* Close Button */}
               <button
@@ -141,6 +141,15 @@ const Header = () => {
                   </p>
                 </Link>
               ))}
+
+              <Link href={"/contact-us"}>
+                <button
+                  type="button"
+                  className="text-black mt-10 hover:bg-white uppercase hover:text-black border-[1px] border-gray-300 focus:ring-4 focus:ring-black font-bold rounded-lg text-md px-5 py-2.5 me-2 mb-2 focus:outline-none"
+                >
+                  Бидэнтэй холбогдох
+                </button>
+              </Link>
             </nav>
           </div>
         </div>
