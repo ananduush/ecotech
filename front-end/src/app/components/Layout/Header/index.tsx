@@ -1,12 +1,15 @@
 "use client";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
-import { Link } from "@/i18n/routing";
+import { Link, useRouter, usePathname } from "@/i18n/routing";
 import LanguageSelector from "./LanguageSelector";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const t = useTranslations("MenuItems");
+  const pathname = usePathname(); // Get the current path
+  const router = useRouter(); // next-intl router
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -24,25 +27,34 @@ const Header = () => {
       <div className="container flex justify-between items-center">
         {/* Logo */}
         <Link href={"/"}>
-          <img
-            src="/images/logo.png"
-            alt="Ecotech logo"
-            className="max-h-[90px] w-max"
-          />
+          <div>
+            <img
+              src="/images/logo.png"
+              alt="Ecotech logo"
+              className="max-h-[50px] w-max"
+            />
+          </div>
         </Link>
 
         {/* Desktop Menu Items */}
         <div className="hidden lg:flex lg:items-center gap-5">
           {menuItems.map((item, idx) => (
             <Link href={item.link} key={idx}>
-              <span key={item.name} className="group relative w-max">
-                <p className="underline-on-hover">{item.name}</p>
+              <span key={item.name} className={`group relative w-max`}>
+                <p
+                  className={`underline-on-hover min-w-max  ${
+                    pathname === item.link ? "text-main" : "hover:text-main"
+                  }`}
+                >
+                  {item.name}
+                </p>
               </span>
             </Link>
           ))}
           <LanguageSelector />
         </div>
 
+        {/* Mobile Menu Button */}
         <div className="lg:hidden">
           <button
             className="text-gray-800 focus:outline-none"
@@ -72,6 +84,7 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(false)}
           />
         )}
+
         {/* Mobile Sidebar Menu */}
         <div
           className={`fixed top-0 left-0 h-full bg-white shadow-lg w-[100%] max-w-[400px] transform ${
@@ -112,11 +125,21 @@ const Header = () => {
             {/* Menu Items */}
             <nav className="mt-8">
               {menuItems.map((item) => (
-                <div key={item.name} className="mb-4">
-                  <p className="text-xl font-semibold cursor-pointer hover:text-main transition-colors">
-                    {item.name}
+                <Link
+                  onClick={toggleMobileMenu}
+                  href={item.link}
+                  key={item.name}
+                >
+                  <p className="mb-4">
+                    <span
+                      className={`text-xl font-semibold cursor-pointer transition-colors ${
+                        pathname === item.link ? "text-main" : "hover:text-main"
+                      }`}
+                    >
+                      {item.name}
+                    </span>
                   </p>
-                </div>
+                </Link>
               ))}
             </nav>
           </div>

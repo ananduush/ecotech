@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./styles.css";
 import { Autoplay } from "swiper/modules";
+import { Link } from "@/i18n/routing";
 
 const HomeSlider = () => {
   const slides = [
@@ -42,20 +43,30 @@ const HomeSlider = () => {
       </Swiper>
 
       {/* Centered text */}
-      <div className="absolute inset-0 flex flex-col items-start justify-center z-10 container">
-        <h1 className="text-white lg:text-4xl font-bold mb-4">
-          Эколожикал Технологи ХХК
-        </h1>
+      <div className="absolute inset-0 flex flex-col items-start justify-center z-10 container gap-10">
+        <div className="flex flex-col gap-3">
+          <img
+            src="/images/logo.png"
+            alt=""
+            className="max-w-[200px] brightness-[200]"
+          />
 
-        <p className="text-white lg:text-lg max-w-2xl">
-          Эколожикал Текноложи ХХК нь 2011 оноос эхлэн хэрэглэгчдийн эрэлт
-          хэрэгцээнд тулгуурлан хүрээлэн буй орчны аюулгүй байдал, эрүүл ахуй,
-          чанарын удирдлагын стандартад нийцсэн кемп, катерингийн үйлчилгээг
-          хэрэглэгч, үйлчлүүлэгчдийн байгаа газар байршилд хүрч, төв суурин
-          газраас алслагдсан газар зүйн байрлалыг үл харгалзан хэрэглэгчдийн тав
-          тухтай байдлыг эрхэмлэн, суурин болон гэр кэмпүүдийг байгуулан, эрэлт
-          хэрэгцээг хангасан үйлчилгээг үзүүлэхийг зорин ажиллаж байна.
-        </p>
+          <h1 className="text-white lg:text-4xl font-bold">
+            Эколожикал Технологи ХХК -{" "}
+            <span className="font-normal italic">
+              Тогтвортой хөгжсөн 11 жил
+            </span>
+          </h1>
+        </div>
+
+        <Link href={"/contact-us"}>
+          <button
+            type="button"
+            className="text-white hover:bg-white uppercase hover:text-black border-[1px] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-md px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Бидэнтэй холбогдох
+          </button>
+        </Link>
       </div>
     </div>
   );

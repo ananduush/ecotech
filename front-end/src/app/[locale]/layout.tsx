@@ -43,7 +43,9 @@ export default async function LocaleLayout({
             <Header />
           </header>
 
-          <div className="min-h-screen">{children}</div>
+          <div className="min-h-screen overflow-hidden max-w-screen">
+            {children}
+          </div>
 
           <footer>
             <Footer />

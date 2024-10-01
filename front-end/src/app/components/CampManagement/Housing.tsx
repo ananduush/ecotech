@@ -40,16 +40,17 @@ const Housing = () => {
 
   return (
     <div className="flex flex-col gap-10">
-      {contents.map((content: any, idx) => (
+      {contents.map((content, idx) => (
         <div
           data-aos={`${idx % 2 === 0 ? "fade-up-right" : "fade-up-left"}`}
           key={`housing-${idx}`}
-          className="grid grid-cols-2 shadow-lg rounded-lg items-center p-5 gap-2"
+          className="grid grid-cols-1 md:grid-cols-2 shadow-lg rounded-lg items-center p-5 gap-2"
         >
+          {/* For larger screens, align content and image */}
           {idx % 2 === 0 && (
             <div className="">
-              <h2 className="mb-3">{content.title}</h2>
-              <p>{content.description}</p>
+              <h2 className="mb-3 text-lg md:text-2xl">{content.title}</h2>
+              <p className="text-sm md:text-base">{content.description}</p>
             </div>
           )}
 
@@ -58,47 +59,51 @@ const Housing = () => {
               content.images.length >= 3 ? "grid-cols-2" : "grid-cols-1"
             } gap-1`}
           >
-            {content.images.map((img: any, idx: number) => (
+            {content.images.map((img, idx) => (
               <img
                 key={`standart-${idx}`}
                 src={img.url}
                 alt=""
-                className="rounded-md"
+                className="rounded-md w-full object-cover"
               />
             ))}
           </div>
 
           {idx % 2 !== 0 && (
             <div className="text-right">
-              <h2 className="mb-3">{content.title}</h2>
-              <p>{content.description}</p>
+              <h2 className="mb-3 text-lg md:text-2xl">{content.title}</h2>
+              <p className="text-sm md:text-base">{content.description}</p>
             </div>
           )}
         </div>
       ))}
 
       <div className="flex flex-col gap-10 mt-10 mb-[4rem]">
-        <h2>Баримталдаг стандартууд</h2>
+        <h2 className="text-lg md:text-2xl">Баримталдаг стандартууд</h2>
 
         <div className="flex justify-center">
-          {standarts.map((standart: any, idx) => (
+          {standarts.map((standart, idx) => (
             <div
               key={`standart-${idx}`}
-              className="flex items-center max-w-[700px] gap-10"
+              className="flex flex-col md:flex-row items-center max-w-[700px] gap-10"
             >
               <div
                 data-aos={"fade-right"}
                 className="flex flex-col items-center gap-5 text-center"
               >
-                <img src="/icons/iso.svg" alt="" className="max-w-[150px]" />
-                <p>{standart.text}</p>
+                <img
+                  src="/icons/iso.svg"
+                  alt=""
+                  className="max-w-[100px] md:max-w-[150px]"
+                />
+                <p className="text-sm md:text-base">{standart.text}</p>
               </div>
 
               <img
                 data-aos={"fade-left"}
                 src="/images/iso.png"
                 alt=""
-                className="w-[300px]"
+                className="w-[200px] md:w-[300px]"
               />
             </div>
           ))}
