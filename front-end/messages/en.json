@@ -9,9 +9,11 @@
 
   "banner": {
     "title": "About Us",
+    "campManagementTitle": "Camp Management",
     "breadcrumb": {
       "home": "Home",
-      "about": "About Us"
+      "about": "About Us",
+      "campManagement": "Camp Management"
     }
   },
 

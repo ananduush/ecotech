@@ -7,13 +7,23 @@ import Laundry from "@/app/components/CampManagement/Laundry";
 import Services from "@/app/components/CampManagement/Services";
 
 import { BsHousesFill } from "react-icons/bs";
-import { FaWater } from "react-icons/fa";
-import { FaBottleWater } from "react-icons/fa6";
 import { GiWashingMachine } from "react-icons/gi";
 import { MdMiscellaneousServices, MdOutlineFoodBank } from "react-icons/md";
+import Banner from "@/app/components/Banner/HeroBanner";
+import { useTranslations } from "next-intl";
 
 const CampManagement = () => {
   const [active, setActive] = useState("housing");
+  const banner = useTranslations("banner");
+
+  const bannerData = {
+    imageSrc: "/images/company/image1.jpg",
+    title: banner("campManagementTitle"),
+    breadcrumb: [
+      { label: banner("breadcrumb.home"), link: "/" },
+      { label: banner("breadcrumb.campManagement"), link: "/camp-management" },
+    ],
+  };
 
   const slides = [
     {
@@ -76,9 +86,14 @@ const CampManagement = () => {
 
   return (
     <div className="flex flex-col gap-10">
-      <div className="h-[400px] bg-gray-500 w-full text-white text-[50px] font-bold text-center items-center flex justify-center">
+      <Banner
+        imageSrc={bannerData.imageSrc}
+        title={bannerData.title}
+        breadcrumb={bannerData.breadcrumb}
+      />
+      {/* <div className="h-[400px] bg-gray-500 w-full text-white text-[50px] font-bold text-center items-center flex justify-center">
         BANNER
-      </div>
+      </div> */}
 
       <div className="container flex flex-col gap-10">
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4">
