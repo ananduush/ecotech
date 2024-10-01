@@ -13,7 +13,7 @@ const Header = () => {
 
   const menuItems = [
     { name: t("home"), link: "/" },
-    { name: t("aboutUs"), link: "/" },
+    { name: t("aboutUs"), link: "/about-us" },
     { name: t("campManagement"), link: "/camp-management" },
     { name: t("waterProduction"), link: "/" },
     { name: t("partnerships"), link: "/" },
@@ -35,9 +35,9 @@ const Header = () => {
         <div className="hidden lg:flex lg:items-center gap-5">
           {menuItems.map((item, idx) => (
             <Link href={item.link} key={idx}>
-              <p key={item.name} className="group relative w-max">
+              <span key={item.name} className="group relative w-max">
                 <p className="underline-on-hover">{item.name}</p>
-              </p>
+              </span>
             </Link>
           ))}
           <LanguageSelector />
