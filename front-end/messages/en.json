@@ -120,5 +120,13 @@
       "messagePlaceholder": "Write your message here...",
       "submit": "Send Message"
     }
+  },
+  "partnerships": {
+    "title": "Our Partnerships",
+    "breadcrumb": {
+      "home": "Home",
+      "partnerships": "Partnerships"
+    },
+    "description": "Logical Technology\" LLC is proud to collaborate with leading and reputable companies across various industries. We value partnerships based on mutual benefit and trust. Below, we introduce some of our key partners."
   }
 }
