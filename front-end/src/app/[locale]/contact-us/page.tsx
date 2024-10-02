@@ -47,7 +47,7 @@ const ContactUsPage = () => {
               <div className="flex items-center mb-4">
                 <IconPhoneCall size={24} className="text-[#00cc00] mr-2" />
                 <p className="text-lg text-gray-700">
-                  {t("details.phone")}: 7575-7979
+                  {t("details.phone")}: 7575-2929
                 </p>
               </div>
 
@@ -55,7 +55,7 @@ const ContactUsPage = () => {
               <div className="flex items-center">
                 <IconMail size={24} className="text-[#00cc00] mr-2" />
                 <p className="text-lg text-gray-700">
-                  {t("details.email")}: ecotech@ecotech.mn
+                  {t("details.email")}: admin@ecotech.mn
                 </p>
               </div>
             </div>
