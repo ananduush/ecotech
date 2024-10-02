@@ -36,7 +36,7 @@ const HomeServicesSlider = () => {
         />
       ),
       slug: "",
-      title: "хувсац угаалга",
+      title: "хувцас угаалга",
     },
     {
       icon: (

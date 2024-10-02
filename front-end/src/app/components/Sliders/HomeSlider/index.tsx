@@ -52,7 +52,7 @@ const HomeSlider = () => {
           />
 
           <h1 className="text-white lg:text-4xl font-bold">
-            Эколожикал Технологи ХХК -{" "}
+            “ЭКОЛОЖИКАЛ ТЕКНОЛОЖИ” ХХК -{" "}
             <span className="font-normal italic">
               Тогтвортой хөгжсөн 11 жил
             </span>
