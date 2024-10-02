@@ -55,7 +55,7 @@ const ContactUsPage = () => {
               <div className="flex items-center">
                 <IconMail size={24} className="text-[#00cc00] mr-2" />
                 <p className="text-lg text-gray-700">
-                  {t("details.email")}: ecotech@ecotech.mn
+                  {t("details.email")}: admin@ecotech.mn
                 </p>
               </div>
             </div>
