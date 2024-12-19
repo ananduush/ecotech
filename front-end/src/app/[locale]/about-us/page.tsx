@@ -38,7 +38,6 @@ const AboutUsPage = () => {
                   <span className="font-semibold">{chunks}</span>
                 ),
               })}
-              {company("introduction")}
             </p>
           </div>
 

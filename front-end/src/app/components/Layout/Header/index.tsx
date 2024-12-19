@@ -7,8 +7,7 @@ import LanguageSelector from "./LanguageSelector";
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const t = useTranslations("MenuItems");
-  const pathname = usePathname(); // Get the current path
-  const router = useRouter(); // next-intl router
+  const pathname = usePathname();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);

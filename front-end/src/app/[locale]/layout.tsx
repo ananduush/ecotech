@@ -6,6 +6,8 @@ import { getMessages } from "next-intl/server";
 import "../globals.css";
 import "aos/dist/aos.css";
 import Header from "../components/Layout/Header";
+import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
+import Providers from "../providers/ProgressBarProvider";
 
 const geistSans = localFont({
   src: "../../../public/fonts/GeistVF.woff",
@@ -44,7 +46,7 @@ export default async function LocaleLayout({
           </header>
 
           <div className="min-h-screen overflow-hidden max-w-screen">
-            {children}
+            <Providers>{children}</Providers>
           </div>
 
           <footer>
@@ -55,3 +57,4 @@ export default async function LocaleLayout({
     </html>
   );
 }
+``;
