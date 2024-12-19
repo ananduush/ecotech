@@ -115,7 +115,10 @@ const Footer = () => {
             ))}
 
             {columns.map((column: any) => (
-              <div className="hidden lg:flex flex-col gap-2">
+              <div
+                key={`columns-children-${column.title}`}
+                className="hidden lg:flex flex-col gap-2"
+              >
                 {column.children.map((child: any, idx: number) => (
                   <Link key={`column-children-${child.name}`} href={child.link}>
                     <p className="underline-on-hover text-sm">{child.name}</p>
